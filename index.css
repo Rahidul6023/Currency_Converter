@@ -1,0 +1,28 @@
+html{
+    box-sizing: border-box;
+}
+h2,p,span{
+    margin: 0;
+    padding: 0;
+}
+#container {
+    background-color: rgb(148, 233, 155);
+    width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    border: 2px solid;
+    padding: 20px;
+}

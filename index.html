@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <span id="Date">
+                <i class="fa-regular fa-calendar"></i>
+                07/08/2022
+            </span>
+        </nav>
+        <main class="main-container">
+            <div class="box">
+                <label for="amount">Amount</label>
+                <div class="inputs">
+                    <input type="text" id="amount">
+                    <select name="currency-choice" id="currency1"></select>
+                </div>
+            </div>
+            <div class="box">
+                <label>Converted To</label>
+                <div class="inputs">
+                    <span>110/-</span>
+                    <select name="currency-choice" id="currency2"></select>
+                </div>
+            </div>
+            <div id="bottom-section">
+                <button>Convert</button>
+                <button>Swap</button>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>
