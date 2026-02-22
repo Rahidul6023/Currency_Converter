@@ -169,6 +169,9 @@ button{
     font-size: 15px;
     background-color: rgb(248, 184, 65);
 }
+#convert-btn{
+    color: white;
+}
 #swap-btn{
     background-color: #A0E870;
 }
@@ -181,7 +184,7 @@ button:active{
 
 .list-items{
     box-sizing: border-box;
-    padding: 10px 14px;
+    padding: 10px 5px;
     border-radius: 10px;
     border: 1px solid #ddd;
     font-size: 15px;
@@ -195,11 +198,28 @@ ul{
     right: 0;
 }
 li{
+    display: flex;
+    align-items: center;
+    gap: 4px;
     margin-bottom: 2px;
+}
+.currencyValueText{
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 @media(max-width: 450px){
     #container{
         width: 90%;
     }
+}
+img{
+    width: 20px;
+}
+.hidden{
+    display: none;
+}
+.rotate{
+    transform: rotate(180deg);
 }
