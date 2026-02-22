@@ -6,7 +6,7 @@ html{
 body{
     background-color: #FAFAFA;
 }
-h2,p,span{
+h2,p,span,input,ul{
     margin: 0;
     padding: 0;
 }
@@ -38,20 +38,21 @@ main{
     padding: 1px;
 }
 .box{
+    height: 90px;
+    max-height: 70px;
     background-color: white;
     display: flex;
     flex-direction: column;
     border-radius: 24px;
     padding: 30px 30px 100px 20px;
     gap: 20px;
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05)
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
 }
 #results{
-    margin-top: 10px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    align-items: center;
+    align-items: flex-start;
 }
 #converted-price{
     font-size: 20px;
@@ -60,7 +61,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 20px 10px 10px 10px;
+    margin: 40px 10px 10px 10px;
 }
 .inputs{
     display: flex;
@@ -68,6 +69,23 @@ main{
     gap: 20px;
     align-items: flex-start;
     /* border: 2px solid; */
+}
+.currency{
+    position: relative;
+    margin-top: -6px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    
+}
+.currencyValue{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.currencyValue svg{
+    width: 10px;
 }
 .input-group {
     position: relative;
@@ -77,7 +95,7 @@ main{
     width: 100%;
     border: 0;
     outline: 0px;
-    padding: 8px 0;
+    padding: 0px 0px 10px 0px;
     font-family: inter;
     font-size: 20px;
     background: transparent;
@@ -94,7 +112,7 @@ main{
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 80%;
 }
 #underline::after {
     content: "";
@@ -156,13 +174,25 @@ button:hover{
 button:active{
     transform: scale(0.9);
 }
-option {
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-  background: white;
-  cursor: pointer;
+
+.list-items{
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    background: white;
+    cursor: pointer;
+}
+ul{ 
+    /* display: none; */
+    list-style-type: none;
+    max-height: 90px;
+    overflow-y: auto;
+    min-width: 117%; 
+    right: 0;
+}
+li{
+    margin-bottom: 2px;
 }
 
 @media(max-width: 450px){
