@@ -10,7 +10,8 @@ const convertTo = document.getElementById('convertTo')
 const countryFrom = document.getElementById('countryFrom')
 const countryTo = document.getElementById('countryTo')
 const input = document.getElementById('amount')
-const convertedPrice = document.getElementById('convertedPrice')
+const convertedPrice = document.getElementById('converted-price')
+
 
 enableList1.addEventListener("click",()=>{
     list1.classList.toggle('hidden')
@@ -48,6 +49,11 @@ convertBtn.addEventListener("click",()=>{
 })
 
 swapBtn.addEventListener("click",()=>{
-
+    let temp = input.value
+    input.value = convertedPrice.textContent
+    convertedPrice.textContent = temp
+    temp = countryFrom.innerHTML
+    countryFrom.innerHTML = countryTo.innerHTML
+    countryTo.innerHTML = temp
 })
 
