@@ -4,6 +4,8 @@ const enableList2 = document.getElementById("enableList2")
 const list1 = document.getElementById('list1')
 const list2 = document.getElementById('list2')
 const swapBtn = document.getElementById('swap-btn')
+let convertFrom = document.getElementById('convertFrom')
+let convertTo = document.getElementById('convertTo')
 const countryFrom = document.getElementById('countryFrom')
 const countryTo = document.getElementById('countryTo')
 const input = document.getElementById('amount')
@@ -45,8 +47,9 @@ list1.addEventListener("click",async (e)=>{
     `
     list1.classList.toggle('hidden')
     enableList1.classList.toggle('rotate')
-    let result = await getConverted(Number(input.value),countryFrom.innerText,countryTo.innerText)
-    resultArea.innerText = result
+    convertFrom = document.getElementById('convertFrom')
+    let result = await getConverted(Number(input.value),convertFrom.textContent.trim(),convertTo.textContent.trim())
+    resultArea.textContent = result
 })
 list2.addEventListener("click",async (e)=>{
     const selectedItem2 = e.target.closest('li')
@@ -57,8 +60,9 @@ list2.addEventListener("click",async (e)=>{
     `
     list2.classList.toggle('hidden')
     enableList2.classList.toggle('rotate')
-    let result = await getConverted(Number(input.value),countryFrom.innerText,countryTo.innerText)
-    resultArea.innerText = result
+    convertTo = document.getElementById('convertTo')
+    let result = await getConverted(Number(input.value),convertFrom.textContent.trim(),convertTo.textContent.trim())
+    resultArea.textContent = result
 })
 
 async function getConverted(amount,from,to){
@@ -68,8 +72,10 @@ async function getConverted(amount,from,to){
 }
 
 input.addEventListener("input",async ()=>{
-    let result = await getConverted(Number(input.value),countryFrom.innerText,countryTo.innerText)
-    resultArea.innerText = result
+    convertFrom = document.getElementById('convertFrom')
+    convertTo = document.getElementById('convertTo')
+    let result = await getConverted(Number(input.value),convertFrom.textContent.trim(),convertTo.textContent.trim())
+    resultArea.textContent = result
 })
 
 swapBtn.addEventListener("click",()=>{
